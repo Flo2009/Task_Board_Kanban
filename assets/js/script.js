@@ -29,7 +29,7 @@ function generateTaskId() {
     if (!taskList){
         nextId=0;
     }else if(taskList){
-      //use Math.randon to create a random number between 0 and 1 to have a unique identifier
+      //use Math.random to create a random number between 0 and 1 to have a unique identifier
         nextId=Math.random();
       }
     
@@ -67,7 +67,7 @@ function createTaskCard(task) {
       taskDeleteButton.addClass('border-light');
     }
   }
-
+//append everything to the task card
   taskBody.append(taskDescription, taskDueDate, taskDeleteButton);
   newTask.append(taskHeader, taskBody);
 
@@ -87,13 +87,13 @@ function renderTaskList() {
     const doneList = $('#done-cards');
     doneList.empty();
 
-    // console.lo/g(taskList);
+    // console.log(taskList);
     //only render in case there is data in the task list
     if (taskList != null){
 
         taskList.forEach(element => {
             let id=element.id;
-            // let topic=element.topic;
+           
             let descr=element.descr;
             let dueDate=element.dueDate;
             let title=element.name;
@@ -107,7 +107,7 @@ function renderTaskList() {
             } else if (task.status === 'done') {
                 doneList.append(createTaskCard(task));
             }
-            // createTaskCard(task);
+            
         });
     }  
     //make the card draggable and create the effect to make it transperent when moved  
@@ -121,7 +121,6 @@ function renderTaskList() {
             ? $(e.target)
             : $(e.target).closest('.ui-draggable');
 
-            // console.log(original.attr('task'));
           //  Return the clone with the width set to the width of the original card. This is so the clone does not take up the entire width of the lane. This is to also fix a visual bug where the card shrinks as it's dragged to the right.
           return original.clone().css({
             width: original.outerWidth(),
@@ -203,8 +202,7 @@ function handleDrop(event, ui ) {
     const tasks = readTasksFromStorage();//get the data from localStorage into an array
     let taskId= ui.draggable.attr('task');//get the ID from the element over the ui
 
-    // console.log(tasks);
-    // console.log(taskId);
+    
     
     const newStatus = event.target.id;//get the tageted lane status i.e. "done", "in-progress", "to-do"
     console.log(newStatus);
