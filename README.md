@@ -16,9 +16,9 @@ To use the KANBAN Task Board you click on the "Add Task" button. A modal opens u
 When the tasks progress you can shift them from "to-do" to "in-Progress" or to "done". After completion or in case the task got obsolete you can delete the task by 
 applying the "Delete" button on the Task Card.
 
-![LandingPage](images/Landing_Page.png)
-![Modal](images/Modal.png)
-![ActiveTasks](images/Tasks_active.png)
+![LandingPage](/Images/Landing_Page.png)
+![Modal](/Images/Modal.png)
+![ActiveTasks](/Images/Tasks_active.png)
 
 ## Credits
 
