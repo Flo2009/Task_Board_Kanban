@@ -22,7 +22,7 @@ applying the "Delete" button on the Task Card.
 
 ## Credits
 
-I used the jquery UI documentation and the bootstrap documentation.
+I used the jquery UI documentation and the bootstrap documentation. Furthermore I used the class content as help.
 
 https://jqueryui.com/
 
